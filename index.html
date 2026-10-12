@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Designvorschau | Fokus Service AG</title>
+  <meta name="description" content="Drei Designrichtungen für die neue Website der Fokus Service AG.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f2ec;
+      --card: #fffdf9;
+      --ink: #221e19;
+      --ink-2: #5c5549;
+      --line: #e4dacb;
+      --orange: #f08815;
+      --orange-text: #9e5000;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+    .container { width: min(1240px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+
+    header { padding-block: 2rem; }
+    header .container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+    header img { width: clamp(150px, 42vw, 190px); }
+    .badge { padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid var(--line); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); background: var(--card); }
+
+    .intro { padding-block: clamp(2.5rem, 2rem + 3vw, 5rem) clamp(2.5rem, 2rem + 2vw, 4rem); }
+    .intro h1 { margin: 0; max-width: 16ch; font: 400 clamp(2.6rem, 1.6rem + 4.4vw, 5.2rem)/1.02 'Instrument Serif', Georgia, serif; letter-spacing: -0.02em; }
+    .intro h1 em { color: var(--orange-text); }
+    .intro p { margin: 1.5rem 0 0; max-width: 40rem; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); color: var(--ink-2); }
+    .howto { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; margin: 2rem 0 0; padding: 0; list-style: none; font-size: 0.95rem; color: var(--ink-2); }
+    .howto li { display: flex; gap: 0.6rem; align-items: center; }
+    .howto span { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: var(--bg); font-size: 0.8rem; font-weight: 700; }
+
+    .designs { display: grid; gap: 2rem; padding-bottom: clamp(4rem, 3rem + 4vw, 7rem); }
+    .design { display: grid; gap: 1.5rem; padding: clamp(1rem, 0.75rem + 1vw, 1.5rem); border-radius: 28px; background: var(--card); border: 1px solid var(--line); transition: box-shadow 400ms var(--ease-out), transform 400ms var(--ease-out); }
+    .design:hover { box-shadow: 0 30px 60px -30px rgba(34, 30, 25, 0.35); transform: translateY(-3px); }
+    .frame { display: block; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #eee; text-decoration: none; }
+    .frame-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #f1ece4; border-bottom: 1px solid var(--line); }
+    .frame-bar i { width: 10px; height: 10px; border-radius: 50%; background: #d9cfc1; }
+    .frame-bar small { margin-left: 10px; font-size: 0.75rem; color: var(--ink-2); }
+    .frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; transition: transform 900ms var(--ease-out); }
+    .design:hover .frame img { transform: scale(1.02); }
+    .info { display: flex; flex-direction: column; gap: 0.9rem; padding: 0.5rem 0.5rem 0.75rem; }
+    .letter { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--orange); font-weight: 700; font-size: 1.1rem; }
+    .info h2 { margin: 0; font: 400 clamp(2rem, 1.6rem + 1.6vw, 2.8rem)/1.05 'Instrument Serif', Georgia, serif; }
+    .info p { margin: 0; color: var(--ink-2); }
+    .traits { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+    .traits li { padding: 0.35rem 0.75rem; border-radius: 999px; background: var(--bg); font-size: 0.85rem; font-weight: 500; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.85rem 1.25rem; border-radius: 999px; border: 1px solid var(--line); font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: background-color 180ms, border-color 180ms, color 180ms; }
+    .btn svg { width: 16px; height: 16px; transition: transform 180ms var(--ease-out); }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn--main { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+    .btn--main:hover { background: #3a332b; }
+    .btn:not(.btn--main):hover { border-color: var(--ink); }
+    @media (min-width: 900px) {
+      .design { grid-template-columns: 1.35fr 1fr; align-items: center; gap: 2.5rem; }
+      .design:nth-child(even) .frame { order: 2; }
+    }
+
+    footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; font-size: 0.875rem; color: var(--ink-2); }
+    footer .container { display: grid; gap: 0.5rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 1ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/img/logo.webp" alt="Fokus Service AG" width="800" height="196">
+      <span class="badge">Designvorschau</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="container">
+        <h1>Drei Richtungen für Ihre <em>neue Website.</em></h1>
+        <p>Alle drei Entwürfe nutzen Ihr Logo, Ihre Farben und dieselben Inhalte – sie unterscheiden sich in Stil, Wirkung und Persönlichkeit. Klicken Sie sich in Ruhe durch und wählen Sie die Richtung, die am besten zu Fokus Service passt.</p>
+        <ol class="howto">
+          <li><span>1</span>Design öffnen</li>
+          <li><span>2</span>Startseite und Unterseiten anschauen</li>
+          <li><span>3</span>Unten in der Leiste direkt zwischen A, B und C wechseln</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="container designs" aria-label="Designs">
+      <article class="design">
+        <a class="frame" href="a/index.html" aria-label="Design A öffnen">
+          <span class="frame-bar"><i></i><i></i><i></i><small>fokusservice.ch</small></span>
+          <img src="assets/img/thumbs/design-a.webp" alt="Startseite im Design A: helles, warmes Layout mit Serifenschrift und Bogenfoto" width="1200" height="750">
+        </a>
+        <div class="info">
+          <span class="letter">A</span>
+          <h2>Warm &amp; Persönlich</h2>
+          <p>Helles Papierweiss, eine elegante Serifenschrift und die Ringe aus dem Logo als ruhiges Motiv. Wirkt seriös, nahbar und vertrauenswürdig – wie ein persönliches Gespräch.</p>
+          <ul class="traits"><li>Editorial</li><li>Elegant</li><li>Vertrauen</li><li>Ruhig</li></ul>
+          <div class="actions">
+            <a class="btn btn--main" href="a/index.html">Startseite ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="a/personalvermittlung.html">Personalvermittlung</a>
+            <a class="btn" href="a/fahrdienst.html">Fahrdienst</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="design">
+        <a class="frame" href="b/index.html" aria-label="Design B öffnen">
+          <span class="frame-bar"><i></i><i></i><i></i><small>fokusservice.ch</small></span>
+          <img src="assets/img/thumbs/design-b.webp" alt="Startseite im Design B: klare Schweizer Typografie mit grossen Buchstaben und orangen Flächen" width="1200" height="750">
+        </a>
+        <div class="info">
+          <span class="letter">B</span>
+          <h2>Klar &amp; Kraftvoll</h2>
+          <p>Schweizer Raster, kräftige Typografie, orange Flächen und ein Kachel-Layout. Wirkt modern, tatkräftig und selbstbewusst – ideal, um Personalvermittlung stark zu positionieren.</p>
+          <ul class="traits"><li>Swiss Style</li><li>Modern</li><li>Dynamisch</li><li>Direkt</li></ul>
+          <div class="actions">
+            <a class="btn btn--main" href="b/index.html">Startseite ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="b/personalvermittlung.html">Personalvermittlung</a>
+            <a class="btn" href="b/fahrdienst.html">Fahrdienst</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="design">
+        <a class="frame" href="c/index.html" aria-label="Design C öffnen">
+          <span class="frame-bar"><i></i><i></i><i></i><small>fokusservice.ch</small></span>
+          <img src="assets/img/thumbs/design-c.webp" alt="Startseite im Design C: dunkles, hochwertiges Layout mit scharfgestelltem Gesicht im Ring" width="1200" height="750">
+        </a>
+        <div class="info">
+          <span class="letter">C</span>
+          <h2>Im Fokus</h2>
+          <p>Dunkel und hochwertig, mit leuchtendem Orange. Auf der Startseite stellt sich das Bild dort scharf, wo die Maus ist – der Firmenname wird zum Erlebnis. Wirkt premium und bleibt im Kopf.</p>
+          <ul class="traits"><li>Premium</li><li>Interaktiv</li><li>Auffallend</li><li>Markant</li></ul>
+          <div class="actions">
+            <a class="btn btn--main" href="c/index.html">Startseite ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="c/personalvermittlung.html">Personalvermittlung</a>
+            <a class="btn" href="c/fahrdienst.html">Fahrdienst</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>Vertrauliche Vorschau für die Fokus Service AG – nicht öffentlich und nicht in Suchmaschinen.</span>
+      <span>Bilder sind Platzhalter (Unsplash) und werden auf der fertigen Website durch eigene Fotos ersetzt. Formulare sind in der Vorschau nicht aktiv.</span>
+    </div>
+  </footer>
+</body>
+</html>
