@@ -36,6 +36,11 @@
     .badge { padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid var(--line); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); background: var(--card); }
 
     .intro { padding-block: clamp(2.5rem, 2rem + 3vw, 5rem) clamp(2.5rem, 2rem + 2vw, 4rem); }
+    .news { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-bottom: 3rem; padding: 1.25rem 1.5rem; border-radius: 20px; background: var(--ink); color: var(--bg); text-decoration: none; transition: background-color 180ms; }
+    .news:hover { background: #3a332b; }
+    .news-tag { padding: 0.35rem 0.8rem; border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .news strong { font-size: 1.1rem; }
+    .news-go { margin-left: auto; font-weight: 700; color: var(--orange); white-space: nowrap; }
     .intro h1 { margin: 0; max-width: 16ch; font: 400 clamp(2.6rem, 1.6rem + 4.4vw, 5.2rem)/1.02 'Instrument Serif', Georgia, serif; letter-spacing: -0.02em; }
     .intro h1 em { color: var(--orange-text); }
     .intro p { margin: 1.5rem 0 0; max-width: 40rem; font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); color: var(--ink-2); }
@@ -89,6 +94,11 @@
   <main>
     <section class="intro">
       <div class="container">
+        <a class="news" href="entwurf/index.html">
+          <span class="news-tag">Neu</span>
+          <span><strong>Überarbeiteter Entwurf nach Ihrem Feedback</strong><br>Schlicht, gut lesbar und mit der Menüstruktur Ihrer bisherigen Website.</span>
+          <span class="news-go">Entwurf ansehen →</span>
+        </a>
         <h1>Drei Richtungen für Ihre <em>neue Website.</em></h1>
         <p>Alle drei Entwürfe nutzen Ihr Logo, Ihre Farben und dieselben Inhalte – sie unterscheiden sich in Stil, Wirkung und Persönlichkeit. Klicken Sie sich in Ruhe durch und wählen Sie die Richtung, die am besten zu Fokus Service passt.</p>
         <ol class="howto">
