@@ -31,9 +31,7 @@
   --duration: 160ms;
 }
 
-/* Schriftgrösse umschaltbar (Knopf „A+“ in der Kopfzeile) */
 html { font-size: 100%; -webkit-text-size-adjust: 100%; }
-html[data-size='gross'] { font-size: 118.75%; }
 
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-text); font-size: var(--text-base); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -78,10 +76,8 @@ em.accent { font-style: italic; color: var(--orange-text); }
 .topbar a:hover { color: var(--orange); }
 .topbar svg { width: 18px; height: 18px; }
 .topbar-contact { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
-.size-switch { display: inline-flex; align-items: center; gap: 0.5rem; }
-.size-switch button { min-width: 44px; min-height: 36px; padding: 0 0.6rem; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 8px; background: transparent; color: #fff; font: 700 1rem/1 var(--font-text); cursor: pointer; }
-.size-switch button[aria-pressed='true'] { background: var(--orange); border-color: var(--orange); color: var(--ink); }
-.size-switch button:hover { border-color: #fff; }
+.topbar-address { color: #cfc5b6; }
+@media (max-width: 760px) { .topbar-address { display: none; } }
 
 .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 92px; }
